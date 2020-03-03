@@ -30,6 +30,13 @@
         </div>
     </div>
     <div class="container body-content">
+        @if(TempData["Message"] != null)
+        {
+        <div class="alert alert-info">
+            @TempData["Message"]
+        </div>
+        }
+
         @RenderBody()
         <hr />
         <footer>
@@ -42,3 +49,6 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+<script>
+    
+</script>
